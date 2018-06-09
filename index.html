@@ -1,0 +1,49 @@
+<!--Данный скрипт улучшает функционал функции WhatsApp Web "Прямая связь" описанный на странице-->
+<!--https://faq.whatsapp.com/general/26000030-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Чат в Whatsapp с несохранённым контактом</title>
+    <style>
+        #text_area {
+            width: 500px;
+        }
+    </style>
+</head>
+<body>
+<h3></h3>
+<p></p>
+
+<h3>Чат в Whatsapp с несохранённым контактом.</h3>
+<p>Введите номер абонента в формате 79031234567
+и нажнмите "Начать чат"</p>
+<p>При ввводе номера НЕ добавляйте плюс, нулей, скобок и тире.</p>
+<p>Учтите, что у данного номера телефона должен быть активный аккаунт WhatsApp.</p>
+<p>ВАЖНО! Вы должны быть залогинены в Whatsapp Web.</p>
+
+<input value="" id="phone_number" title="Введите номер телефона"><br><br>
+<input id="button_1" type="button" value="Начать чат"
+       onclick="document.location.href='https://api.whatsapp.com/send?phone='+document.getElementById('phone_number').value;">
+
+<br><br><br><br>
+<h3>Рассылка сообщения выбранным контактам без создания чата<</h3>
+<p>Введите текст сообщения и нажмите "Отправить".</p>
+<p>Выбрать получателей Вы сможете позже.</p>
+<p>ВАЖНО! Вы должны быть залогинены в Whatsapp Web.</p>
+<input id="text_area" value="" title="Введите текст сообщения"><br><br>
+<input id="button_2" type="button" value="Отправить"
+       onclick="document.location.href='https://api.whatsapp.com/send?text='+document.getElementById('text_area').value;">
+
+
+
+<!--<script>-->
+    <!--function openNewWin(url) {-->
+        <!--myWin= open(url);-->
+    <!--}-->
+<!--</script>-->
+
+</body>
+</html>
